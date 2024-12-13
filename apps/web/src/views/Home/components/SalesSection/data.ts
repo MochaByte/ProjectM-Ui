@@ -1,80 +1,83 @@
 import { TranslateFunction } from '@pancakeswap/localization'
 import { SalesSectionProps } from '.'
-import iceConeA from '../../../../../public/images/home/trade/iceconea.png'
+import mokoiswap from '../../../../../public/images/home/trade/iceconea.png'
 import iceConeB from '../../../../../public/images/home/trade/iceconeb.png'
-import bridgeA from '../../../../../public/images/home/bridge/bridge_a.png'
+import mokoibridge from '../../../../../public/images/home/bridge/bridge_a.png'
 import bridgeB from '../../../../../public/images/home/bridge/bridge_b.png'
-import earnIce from '../../../../../public/images/home/earn/ice.png'
+import mokoiearn from '../../../../../public/images/home/earn/ice.png'
+
 
 export const swapSectionData = (t: TranslateFunction): SalesSectionProps => ({
-  headingText: t('Trade any token at the best rate'),
+  headingText: t('Swap effortlessly on Ink Sepolia'),
   bodyText: t(
-    'Our AI-powered DEX aggregator scans the entire blockchain to find the most efficient way to execute your trade. ' +
-    'Stop wasting money on inefficient trades!'
+  'Harness the power of Ink Sepolia to swap any token seamlessly and securely. ' +
+  'Our advanced tools ensure optimal rates and lightning-fast execution, letting you trade with confidence.'
   ),
   reverse: false,
   primaryButton: {
     to: '/swap',
-    text: t('Trade Now'),
+    text: t('Swap'),
     external: false,
   },
   secondaryButton: {
-    to: 'https://wiki.icecreamswap.com/dex/swap',
-    text: t('Learn'),
+    to: 'https://wiki.mokoi.xyz/dex/swap',
+    text: t('Learn More'),
     external: true,
   },
   images: {
     path: '/images/home/trade/',
     attributes: [
-      { src: iceConeA, alt: '' },
+      { src: mokoiswap, alt: '' },
       { src: iceConeB, alt: '' },
     ],
   },
 })
 
 export const bridgeSectionData = (t: TranslateFunction): SalesSectionProps => ({
-  headingText: t('Bridge with built-in Faucet'),
+  headingText: t('Bridge Tokens with Ease – Coming Soon'),
   bodyText: t(
-    'IceCreamSwap allows direct bridging between many chains with ' +
-      'its audited and battle tested smart contracts. ' +
-      'The unique built-in faucet automatically drops you native tokens so you never have to worry about gas fees again.'
+    'Get ready for seamless bridging between multiple chains on Ink! ' +
+      'Our upcoming bridge feature will include a built-in faucet to ensure you never run out of gas for your transactions. Stay tuned!'
   ),
   reverse: true,
   primaryButton: {
-    to: '/bridge',
-    text: t('Bridge Now'),
+    to: '#', // Replace with the actual link when ready
+    text: t('Coming Soon'),
     external: false,
   },
   secondaryButton: {
-    to: 'https://wiki.icecreamswap.com/dex/bridge',
-    text: t('Learn'),
+    to: 'https://wiki.mokoi.xyz/dex/bridge',
+    text: t('Learn More'),
     external: true,
   },
   images: {
     path: '/images/home/earn/',
     attributes: [
-      { src: bridgeA, alt: '' },
-      { src: bridgeB, alt: '' },
+      { src: mokoibridge, alt: 'Bridge Tokens' },
+      // { src: bridgeB, alt: 'Built-in Faucet' },
     ],
   },
 })
 
 export const earnSectionData = (t: TranslateFunction): SalesSectionProps => ({
-  headingText: t('Earn. Provide liquidity and earn ICE tokens'),
-  bodyText: t('Not only do you earn trading fees by providing liquidity, but with Liquidity Farms, you can also earn ICE tokens on top.'),
+  headingText: t('Earn Rewards – Coming Soon'),
+  bodyText: t(
+    'Exciting earning opportunities are on the way! ' +
+      'Provide liquidity, earn trading fees, and participate in Liquidity Farms to earn ICE tokens. Keep an eye out for updates!'
+  ),
   reverse: false,
   primaryButton: {
-    to: '/farms',
-    text: t('Farms'),
+    to: '#', // Replace with the actual link when ready
+    text: t('Stay Tuned'),
     external: false,
   },
   secondaryButton: {
-    to: 'https://wiki.icecreamswap.com/dex/farm',
-    text: t('Learn'),
+    to: 'https://wiki.mokoi.xyz/dex/farm',
+    text: t('Learn More'),
     external: true,
   },
   images: {
     path: '/images/home/ice/',
-    attributes: [{ src: earnIce, alt: '' }],
+    attributes: [{ src: mokoiearn, alt: '' }],
   },
 })

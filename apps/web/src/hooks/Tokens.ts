@@ -196,9 +196,12 @@ export function useOnRampToken(tokenAddress?: string): Currency | undefined {
 
 export function useCurrency(currencyId: string | undefined): Currency | ERC20Token | null | undefined {
   const native = useNativeCurrency()
+  // Set ETH and USDC as default tokens if no currencyId is provided
+  const DEFAULT_CURRENCY_ID = currencyId || (native.symbol === 'ETH' ? 'ETH' : 'USDC')
+
   const isNative =
     currencyId?.toUpperCase() === native.symbol?.toUpperCase() || currencyId?.toLowerCase() === GELATO_NATIVE
-  const token = useToken(isNative ? undefined : currencyId)
+  const token = useToken(isNative ? undefined : DEFAULT_CURRENCY_ID)
   return isNative ? native : token
 }
 

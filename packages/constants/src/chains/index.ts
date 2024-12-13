@@ -1,3 +1,4 @@
+import { inkTestnet } from './inkTestnet'
 import { bitgert } from './bitgert'
 import { boba } from "./boba"
 import { bsc } from './bsc'
@@ -33,6 +34,7 @@ import { linea } from "./linea"
 import { berachainTestnet } from "./berachainTestnet"
 
 export const chainMap = {
+  inkTestnet,
   core,
   bsc,
   bob,
@@ -74,6 +76,7 @@ export const getChain = (chainId: number) => {
 }
 
 export enum ChainId {
+  INK_TEST = inkTestnet.id,
   CORE = core.id,
   BLAST = blast.id,
   NEON = neon.id,
@@ -109,4 +112,4 @@ export enum ChainId {
   BERACHAIN_TEST = berachainTestnet.id,
 }
 
-export const defaultChainId = ChainId.CORE
+export const defaultChainId = ChainId.INK_TEST

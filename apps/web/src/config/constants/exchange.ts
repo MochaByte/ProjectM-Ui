@@ -70,10 +70,9 @@ export const ONE_HUNDRED_PERCENT = new Percent('1')
 export const BASE_FEE = new Percent(30n, BIPS_BASE)
 export const INPUT_FRACTION_AFTER_FEE = ONE_HUNDRED_PERCENT.subtract(BASE_FEE)
 
-// BNB
-export const DEFAULT_INPUT_CURRENCY = 'BNB'
-// ICE
-export const DEFAULT_OUTPUT_CURRENCY = '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82'
+export const DEFAULT_INPUT_CURRENCY = 'ETH' // Native currency symbol or token ID
+export const DEFAULT_OUTPUT_CURRENCY = '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48' // USDC address on Ethereum
+
 
 // Handler string is passed to Gelato to use PCS router
 export const GELATO_HANDLER = 'pancakeswap'

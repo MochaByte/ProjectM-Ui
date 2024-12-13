@@ -42,7 +42,7 @@ const Stats = () => {
       <Text textAlign="center" color="textSubtle">
         {t('The AI powered DEX aggregator improves with every swap. The more you trade, the smarter and more efficient the aggregator becomes.')}<br/>
       </Text>
-      {/*
+      
       <Flex flexWrap="wrap">
         <Text display="inline" textAlign="center" color="textSubtle" mb="20px">
           {entrusting}
@@ -50,37 +50,37 @@ const Stats = () => {
           {inFunds}
         </Text>
       </Flex>
-      */}
+     
 
-      {/*
+      
       <Text textAlign="center" color="textSubtle" bold mb="32px">
         {t('Will you join them?')}
       </Text>
-      */}
+     
 
-      {/* <Flex flexDirection={['column', null, null, 'row']}> */}
-      {/*   <IconCard {...UsersCardData} mr={[null, null, null, '16px']} mb={['16px', null, null, '0']}> */}
-      {/*     <StatCardContent */}
-      {/*       headingText={t('%users% users', { users })} */}
-      {/*       bodyText={t('in the last 30 days')} */}
-      {/*       highlightColor={theme.colors.secondary} */}
-      {/*     /> */}
-      {/*   </IconCard> */}
-      {/*   <IconCard {...TradesCardData} mr={[null, null, null, '16px']} mb={['16px', null, null, '0']}> */}
-      {/*     <StatCardContent */}
-      {/*       headingText={t('%trades% trades', { trades })} */}
-      {/*       bodyText={t('made in the last 30 days')} */}
-      {/*       highlightColor={theme.colors.primary} */}
-      {/*     /> */}
-      {/*   </IconCard> */}
-      {/*   <IconCard {...StakedCardData}> */}
-      {/*     <StatCardContent */}
-      {/*       headingText={t('$%tvl% staked', { tvl: tvlString })} */}
-      {/*       bodyText={t('Total Value Locked')} */}
-      {/*       highlightColor={theme.colors.failure} */}
-      {/*     /> */}
-      {/*   </IconCard> */}
-      {/* </Flex> */}
+      <Flex flexDirection={['column', null, null, 'row']}>
+        <IconCard {...UsersCardData} mr={[null, null, null, '16px']} mb={['16px', null, null, '0']}>
+          <StatCardContent
+            headingText={t('%users% users', { users })}
+            bodyText={t('in the last 30 days')}
+            highlightColor={theme.colors.secondary}
+          />
+        </IconCard>
+        <IconCard {...TradesCardData} mr={[null, null, null, '16px']} mb={['16px', null, null, '0']}>
+          <StatCardContent
+            headingText={t('%trades% trades', { trades })}
+            bodyText={t('made in the last 30 days')}
+            highlightColor={theme.colors.primary}
+          />
+        </IconCard>
+        <IconCard {...StakedCardData}>
+          <StatCardContent
+            headingText={t('$%tvl% staked', { tvl: tvlString })}
+            bodyText={t('Total Value Locked')}
+            highlightColor={theme.colors.failure}
+          />
+        </IconCard>
+      </Flex>
     </Flex>
   )
 }

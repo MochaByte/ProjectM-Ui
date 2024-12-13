@@ -3,25 +3,33 @@ import { Flex, Heading, Text, useMatchBreakpoints, Button, TwitterIcon, Telegram
 import { useTranslation } from '@pancakeswap/localization'
 import Container from 'components/Layout/Container'
 import { useWeb3React } from '@pancakeswap/wagmi'
-import SunburstSvg from './SunburstSvg'
+import { SlideSvgDark, SlideSvgLight } from './SlideSvg'
+
+// const BgWrapper = styled.div`
+//   overflow: hidden;
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   top: 0;
+//   left: 0;
+//   background: linear-gradient(135deg, #10151c, #0c0f13); /* Example gradient */
+//   z-index: -1; /* Ensures it stays behind the footer content */
+// `;
 
 const BgWrapper = styled.div`
+  z-index: -1;
   overflow: hidden;
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 0px;
+  bottom: 0px;
   left: 0px;
 `
 
-const StyledSunburst = styled(SunburstSvg)`
-  height: 350%;
-  width: 350%;
-
-  ${({ theme }) => theme.mediaQueries.xl} {
-    height: 400%;
-    width: 400%;
-  }
+const InnerWrapper = styled.div`
+  position: absolute;
+  width: 100%;
+  bottom: -3px;
 `
 
 const Wrapper = styled(Flex)`
@@ -31,52 +39,63 @@ const Wrapper = styled(Flex)`
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding: 32px 16px;
+  background: linear-gradient(135deg, #123456, #345678); /* Example gradient */
+  background-size: cover; /* Ensures the background covers the area */
+  background-position: center; /* Centers the background */
+  color: white;
+  border-radius: 16px; /* Adds the border radius */
+  margin: 16px; /* Adds space around the footer to enhance the rounded effect */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Optional: adds a soft shadow for better visibility */
+
 `
 
-const FloatingPancakesWrapper = styled(Container)`
-  overflow: hidden;
-  position: absolute;
+const GlowingLine = styled.div`
   width: 100%;
-  height: 100%;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  visibility: hidden;
+  height: 2px;
+  margin: 24px 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+`
 
-  ${({ theme }) => theme.mediaQueries.md} {
-    visibility: visible;
+const FooterLinks = styled(Flex)`
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 16px;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+
+    a {
+      color: white;
+      text-decoration: none;
+      margin: 6px 0;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 `
 
-const TopLeftImgWrapper = styled(Flex)`
-  position: absolute;
-  left: 0;
-  top: 0;
+const TermsWrapper = styled(Flex)`
+  justify-content: flex-end;
+  width: 100%;
+  padding: 8px 16px;
+
+  a {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 `
-
-const BottomRightImgWrapper = styled(Flex)`
-  position: absolute;
-  right: 0;
-  bottom: 0;
-`
-
-const topLeftImage = {
-  path: '/images/home/flying-pancakes/',
-  attributes: [
-    { src: '1-bottom', alt: 'Pancake flying on the bottom' },
-    { src: '1-left', alt: 'Pancake flying on the left' },
-    { src: '1-top', alt: 'Pancake flying on the top' },
-  ],
-}
-
-const bottomRightImage = {
-  path: '/images/home/flying-pancakes/',
-  attributes: [
-    { src: '2-bottom', alt: 'Pancake flying on the bottom' },
-    { src: '2-top', alt: 'Pancake flying on the top' },
-    { src: '2-right', alt: 'Pancake flying on the right' },
-  ],
-}
 
 const Footer = () => {
   const { t } = useTranslation()
@@ -86,63 +105,79 @@ const Footer = () => {
   return (
     <>
       <BgWrapper>
-        <Flex alignItems="center" justifyContent="center" width="100%" height="100%">
-          <StyledSunburst />
-        </Flex>
+        <InnerWrapper>
+          <SlideSvgDark className="slide-svg-dark" width="100%" />
+          <SlideSvgLight className="slide-svg-light" width="100%" />
+        </InnerWrapper>
       </BgWrapper>
-      {/* {(isTablet || isDesktop) && ( */}
-      {/*   <FloatingPancakesWrapper> */}
-      {/*     <TopLeftImgWrapper> */}
-      {/*       <CompositeImage {...topLeftImage} maxHeight="256px" /> */}
-      {/*     </TopLeftImgWrapper> */}
-      {/*     <BottomRightImgWrapper> */}
-      {/*       <CompositeImage {...bottomRightImage} maxHeight="256px" /> */}
-      {/*     </BottomRightImgWrapper> */}
-      {/*   </FloatingPancakesWrapper> */}
-      {/* )} */}
       <Wrapper>
         <Heading mb="24px" scale="xl" color="white">
-          {t('Join us on social media')}
+          {t('Connect with us!')}
         </Heading>
-        <Text textAlign="center" color="white" mb="24px">
-          {t("Don't miss out on the latest news and updates!")}
-        </Text>
-
-        <Flex mb="24px" style={{ gap: '12px' }}>
+        <Flex mb="24px" style={{ gap: '0px' }}>
           <Button
             as="a"
-            title={t('IceCreamSwap Twitter')}
-            href="/twitter"
+            title={t('Mokoi Twitter')}
+            href="https://x.com/Mocha_byte"
             target="_blank"
-            variant="primary"
+            variant="secondary"
             scale="md"
             mr="8px"
           >
-            <TwitterIcon color="currentColor" mr="8px" /> {t('Twitter')}
+            <TwitterIcon color="white" mr="0px" /> {t('')}
           </Button>
           <Button
             as="a"
-            title={t('IceCreamSwap Telegram')}
-            href="/telegram"
+            title={t('Mokoi Discord')}
+            href="https://discord.gg/DZqPjHQx"
             target="_blank"
-            variant="primary"
+            variant="secondary"
             scale="md"
             mr="8px"
           >
-            <TelegramIcon color="currentColor" mr="8px" /> {t('Telegram')}
+            <DiscordIcon color="white" mr="0px" /> {t('')}
           </Button>
           <Button
+            disabled={true}
             as="a"
-            title={t('IceCreamSwap Discord')}
-            href="/discord"
+            title={t('Mokoi Telegram')}
             target="_blank"
-            variant="primary"
+            variant="secondary"
             scale="md"
             mr="8px"
           >
-            <DiscordIcon color="currentColor" mr="8px" /> {t('Discord')}
+            <TelegramIcon color="white" mr="0px" /> {t('')}
           </Button>
         </Flex>
+
+        <FooterLinks>
+          <div>
+            <a href="/swap">{t('Swap')}</a>
+            <a href="/liquitity">{t('Liquidity')}</a>
+            <a href="/earn">{t('Earn')}</a>
+          </div>
+          <div>
+            <a href="/company">{t('Company')}</a>
+            <a href="/blog">{t('Blog')}</a>
+            <a href="/wiki">{t('Wiki')}</a>
+          </div>
+          <div>
+            <a href="/protocol">{t('Protocol')}</a>
+            <a href="/vote">{t('Vote')}</a>
+            <a href="/governance">{t('Governance')}</a>
+          </div>
+          <div>
+            <a href="/developers">{t('Developers')}</a>
+            <a href="/support">{t('Support')}</a>
+            <a href="/donate">{t('Donate')}</a>
+          </div>
+        </FooterLinks>
+
+        <GlowingLine />
+
+        <TermsWrapper>
+          <a href="/terms-of-service">{t('Terms of Service')}</a>
+        </TermsWrapper>
       </Wrapper>
     </>
   )

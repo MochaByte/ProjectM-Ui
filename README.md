@@ -1,12 +1,12 @@
-# 🍦 IceCreamSwap Frontend
+# 🍦 Mokoi Frontend
 
 <p align="center">
-  <a href="https://icecreamswap.com">
-      <img src="https://icecreamswap.com/logo.png" height="128">
+  <a href="https://mokoi.xyz">
+      <img src="https://mokoi.xyz/logo.png" height="128">
   </a>
 </p>
 
-This project contains the main features of the IceCreamSwap website.
+This project contains the main features of the Mokoi website.
 
 If you want to contribute, please refer to the [contributing guidelines](./CONTRIBUTING.md) of this project.
 

@@ -5,7 +5,7 @@ import Text from "../Text/Text";
 import Skeleton from "../Skeleton/Skeleton";
 import { Colors } from "../../theme";
 import {ChainId} from "@pancakeswap/sdk";
-import {ICE} from "@pancakeswap/tokens";
+import {ICE, USD} from "@pancakeswap/tokens";
 
 export interface Props {
   color?: keyof Colors;
@@ -31,16 +31,17 @@ const CakePrice: React.FC<React.PropsWithChildren<Props>> = ({
   cakePriceUsd,
   color = "textSubtle",
   showSkeleton = true,
-  chainId = ChainId.CORE
+  chainId = ChainId.BASE
 }) => {
   return cakePriceUsd ? (
-    <PriceLink
-      href={`/swap?outputCurrency=${ICE[chainId]?.address}&chainId=${chainId}`}
-      target="_blank"
-    >
-      <LogoRound width="24px" mr="8px" />
-      <Text color={color} bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
-    </PriceLink>
+    // <PriceLink
+    //   href={`/swap?outputCurrency=${USD[chainId]?.address}&chainId=${chainId}`}
+    //   target="_blank"
+    // >
+    //   {/* <LogoRound width="24px" mr="8px" /> */}
+    //   <Text color={color} bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
+    // </PriceLink>
+    <div></div>
   ) : showSkeleton ? (
     <Skeleton width={80} height={24} />
   ) : null;

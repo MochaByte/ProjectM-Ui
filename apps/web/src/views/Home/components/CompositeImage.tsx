@@ -99,7 +99,7 @@ const CompositeImage: React.FC<React.PropsWithChildren<ComponentProps>> = ({ att
           src={image.src}
           alt={image.alt}
           loading="lazy"
-          objectFit="fill"
+          objectFit="contain"
           fill
           sizes="(max-width: 850px) 100vw, (max-width: 1024px) 50vw, 575px"
         />

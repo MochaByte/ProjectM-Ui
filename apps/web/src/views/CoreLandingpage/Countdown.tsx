@@ -112,9 +112,9 @@ const Hero = () => {
             <Link display="inline-flex" href="https://coredao.org/">
               Core Chain
             </Link>{' '}
-            from the start on. IceCreamSwap offers a seamless trading experience for digital assets on Core with our
-            swap. The core chain also will support our bridge, allowing users to easily and quickly transfer between
-            different chains - <i>the fastest way to get you startet on Core</i>.
+            from the start on. Mokoi offers a seamless trading experience for digital assets on Ink with our
+            swap. The Ink chain also will support our bridge, allowing users to easily and quickly transfer between
+            different chains - <i>the fastest way to get you startet on Ink</i>.
           </Heading>
           <Flex style={{ gap: '8px' }} flexDirection={['column', null, null, 'row']} alignItems="stretch">
             {!account && <ConnectWalletButton />}
@@ -143,7 +143,7 @@ const Hero = () => {
         >
           <Flex flexDirection="column" alignItems="center">
             <span style={{ fontSize: '2.5em' }}>Ready for takeoff 🚀</span>
-            <span style={{ fontSize: '1.5em' }}>First Dex on Core Chain!</span>
+            <span style={{ fontSize: '1.5em' }}>First Dex on Ink Chain!</span>
           </Flex>
         </Flex>
       </Flex>

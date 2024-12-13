@@ -35,7 +35,7 @@ const stepsConfigBuilder = ({ t, userInfos, eventInfos, userStatus, account, the
         eventStatus: [SaleStatusEnum.Pending, SaleStatusEnum.Premint],
       }),
       title: t('Activate your profile'),
-      bodyText: [t('You’ll need an active IceCreamSwap Profile to buy Minting Tickets and mint a Pancake Squad NFT!')],
+      bodyText: [t('You’ll need an active Mokoi Profile to buy Minting Tickets and mint a Mokoi NFT!')],
       buttons: (
         <>
           <ActivateProfileButton userStatus={userStatus} t={t} />
@@ -50,8 +50,8 @@ const stepsConfigBuilder = ({ t, userInfos, eventInfos, userStatus, account, the
         hasProfileActivated,
         eventStatus: [SaleStatusEnum.Pending, SaleStatusEnum.Premint],
       }),
-      title: t('Hold ICE'),
-      bodyText: [t('Each NFT costs ICE to mint. Remember you also need BNB to cover transaction fees too!')],
+      title: t('Hold KOI'),
+      bodyText: [t('Each NFT costs KOI to mint. Remember you also need ETH to cover transaction fees too!')],
       buttons: (
         <>
           <Button
@@ -72,9 +72,9 @@ const stepsConfigBuilder = ({ t, userInfos, eventInfos, userStatus, account, the
         hasProfileActivated,
         eventStatus: [SaleStatusEnum.Presale, SaleStatusEnum.Sale],
       }),
-      title: t('Buy Squad Tickets'),
+      title: t('Buy Mokoi Tickets'),
       bodyText: [
-        t('Buy Squad Tickets, while stocks last. You’ll use them in step 4.'),
+        t('Buy Mokoi Tickets, while stocks last. You’ll use them in step 4.'),
         `04:00 UTC, Oct. 7 ${t(
           'Pre-sale: Wallets which held “Gen 0” Pancake Bunnies NFTs (bunnyID 0,1,2,3,4) at a snapshot taken some time between 12 and 2 hours before the presale begins can purchase one Squad Ticket per Gen 0 NFT.',
         )}`,

@@ -1,4 +1,4 @@
-import { Airdrop } from 'views/Airdrop'
+import { Airdrop } from 'views/Archive/Airdrop'
 
 const AirdropPage = () => {
   return <Airdrop />

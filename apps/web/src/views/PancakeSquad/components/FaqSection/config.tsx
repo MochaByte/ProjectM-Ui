@@ -7,64 +7,53 @@ type FAQsType = {
 
 const config = ({ t }: FAQsType) => [
   {
-    title: t('What is IceCreamSwap building?'),
+    title: t('What is Mokoi building?'),
     description: [
-      t('A one stop DeFi solution with AI DEX aggregator and an intuitive UI to access efficient DeFi on all chains.')
+      t('Mokoi is creating a cutting-edge DeFi platform with a native swap built on InkChain. It offers minimal gas fees, enhanced security, and a seamless user experience.'),
     ],
   },
   {
-    title: t('Are the Swap contracts audited?'),
+    title: t('What makes Mokoi unique?'),
+    description: [
+      t('Mokoi leverages InkChain’s smol gas fees and Kraken’s expertise in security to provide users with a highly efficient and secure trading experience. Additionally, Mokoi focuses on interoperability, ensuring seamless trading across the Superchain and beyond.'),
+    ],
+  },
+  {
+    title: t('Are Mokoi’s contracts audited?'),
     description: [
       <Text as="p" color="textSubtle" fontSize="16px">
-        {t('Yes, IceCreamSwap has multiple audits including an Audit, Bug Bounty and KYC by CertiK: ',)}
-        <Link
-          display="inline-flex"
-          color="text"
-          title="CertiK Audit"
-          href="https://skynet.certik.com/projects/icecreamswap"
-        >
-          {t('CertiK Audit')}
-        </Link>
-        {t('.')}
+        {t('Yes, Mokoi is committed to transparency and security. All contracts are cloned from Uniswap and audited to ensure the highest level of safety for our users.')}
       </Text>,
     ],
   },
   {
-    title: t('How does IceCreamSwap combine AI with Blockchains?'),
+    title: t('How does Mokoi ensure efficient trades?'),
     description: [
-      t('The Blockchain is an amazing tool for security and trust minimization. But as it\'s still in It\'s early stage, ' +
-        'inefficiencies occur which result in an unwanted value transfer from users to MEV/Arbitrage bots. ' +
-        'Our AI DEX aggregator detects these inefficiencies and automatically extracts them for our users, resulting in more efficient trades and less value lost.'),
+      t('Mokoi integrates smart routing and AI-driven optimizations to minimize price impact and maximize trading efficiency. Our DEX is designed to provide the best possible rates for every trade.'),
     ],
   },
   {
-    title: t('What is the IceCreamSwap AI DEX aggregator?'),
-    description: [
-      t('It\'s a sophisticated system that scans the entire blockchain to find the optimal way to execute your swap. ' +
-        'It allows you to trade any token at the best rate, not only taking into account the IceCreamSwap liquidity, but also the liquidity of other DEXes. ' +
-        'Simplified you can think about it as the booking.com of DEXes, finding you the best offer to execute your trade. ' +
-        'It even extracts Arbitrage opportunities for you, so your trades sometimes end with more value than they began with.'),
-    ],
-  },
-  {
-    title: t('How does IceCreamSwap extract arbitrage for me?'),
-    description: [
-      t('With every trade, our AI DEX aggregator not only finds the best way to execute that trade but also scans for arbitrage opportunities. These opportunities are extracted directly in your trade. As most Arbitrage is generated from inefficient trades, IceCreamSwap users not only avoid losing value to arbitrage but also profit directly from users who still rely on traditional DEXes.'),
-    ],
-  },
-  {
-    title: t('How to list a token on IceCreamSwap?'),
-    description: [
-      t('Simply contact us on Telegram.'),
-    ],
-  },
-  {
-    title: t('How much reward will I get for providing liquidity?'),
+    title: t('What is InkChain, and why is Mokoi built on it?'),
     description: [
       t(
-        'Most of the trading fees are distributed directly to our liquidity providers. Additionally, there are farming pools where you can receive extra ICE tokens, and some tokens, like SCORE, even generate rewards by securing the blockchain.',
+        'InkChain is a powerful Layer 2 blockchain built on the OP stack. It offers 1-second block times, with sub-second blocks coming soon. Its smol gas fees and interoperability make it the perfect foundation for Mokoi’s DeFi ecosystem.',
       ),
     ],
-  }
+  },
+  {
+    title: t('How to list a token on Mokoi?'),
+    description: [
+      t('Simply reach out to us via our social channels like Discord or Twitter. Our team will guide you through the listing process.'),
+    ],
+  },
+  {
+    title: t('What rewards can I earn on Mokoi?'),
+    description: [
+      t(
+        'Liquidity providers on Mokoi earn a majority of trading fees. Additionally, we will introduce farming pools and other incentives to reward our community for participating in the ecosystem.',
+      ),
+    ],
+  },
 ]
+
 export default config

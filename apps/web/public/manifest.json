@@ -1,8 +1,8 @@
 {
-  "short_name": "IcecreamSwap",
-  "name": "IcecreamSwap",
+  "short_name": "Mokoi",
+  "name": "Mokoi",
   "description": "Multi chain DeFi ecosystem",
-  "homepage_url": "https://icecreamswap.com",
+  "homepage_url": "https://mokoi.xyz",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#F8567F",

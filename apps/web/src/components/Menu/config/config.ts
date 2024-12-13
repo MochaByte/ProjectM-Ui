@@ -77,35 +77,36 @@ const config: (
         }, */
       ].map((item) => addMenuItemSupported(item, chainId)),
     },
+    // {
+    //   label: t('Earn'),
+    //   href: '/farms',
+    //   icon: EarnIcon,
+    //   fillIcon: EarnFillIcon,
+    //   image: '/images/decorations/pe2.png',
+    //   showItemsOnMobile: false,
+    //   supportChainIds: [...SUPPORT_FARMS, ...SUPPORT_STAKING],
+    //   items: [
+    //     {
+    //       label: t('Liquidity Farms'),
+    //       href: '/farms',
+    //       supportChainIds: SUPPORT_FARMS,
+    //     },
+    //     {
+    //       label: t('Staking'),
+    //       href: '/pools',
+    //       supportChainIds: SUPPORT_STAKING,
+    //     },
+    //   ].map((item) => addMenuItemSupported(item, chainId)),
+    // },
     {
-      label: t('Earn'),
-      href: '/farms',
-      icon: EarnIcon,
-      fillIcon: EarnFillIcon,
-      image: '/images/decorations/pe2.png',
-      showItemsOnMobile: false,
-      supportChainIds: [...SUPPORT_FARMS, ...SUPPORT_STAKING],
-      items: [
-        {
-          label: t('Liquidity Farms'),
-          href: '/farms',
-          supportChainIds: SUPPORT_FARMS,
-        },
-        {
-          label: t('Staking'),
-          href: '/pools',
-          supportChainIds: SUPPORT_STAKING,
-        },
-      ].map((item) => addMenuItemSupported(item, chainId)),
-    },
-    {
-      label: t('Bridge'),
+      label: t('Bridge - Coming Soon'),
       href: '/bridge',
       hideSubNav: true,
       icon: BridgeIcon,
       supportChainIds: SUPPORT_BRIDGE,
       showItemsOnMobile: false,
       items: [],
+      disabled: true,
     },
     /*{
       label: t('Launchpad'),
@@ -116,15 +117,15 @@ const config: (
       supportChainIds: SUPPORT_LAUNCHPAD,
       items: [],
     },*/
-    {
-      label: t('Info'),
-      href: '/info',
-      icon: InfoIcon,
-      hideSubNav: true,
-      showItemsOnMobile: false,
-      supportChainIds: SUPPORT_INFO,
-      items: [],
-    },
+    // {
+    //   label: t('Info'),
+    //   href: '/info',
+    //   icon: InfoIcon,
+    //   hideSubNav: true,
+    //   showItemsOnMobile: false,
+    //   supportChainIds: SUPPORT_INFO,
+    //   items: [],
+    // },
     {
       label: t('More'),
       icon: MoreHorizontalIcon,
@@ -132,44 +133,44 @@ const config: (
       hideSubNav: true,
       // supportChainIds: [...SUPPORT_INFO, ...SUPPORT_LOCKS, ...SUPPORT_KYC],
       items: [
-        {
-          label: t('Locks'),
-          href: '/locks',
-          supportChainIds: SUPPORT_LOCKS,
-        },
-        {
-          label: t('KYC'),
-          href: '/kyc',
-          supportChainIds: SUPPORT_KYC,
-          items: [
-            {
-              label: t('KYC'),
-              href: '/kyc',
-            },
-            {
-              label: t('KYC Checker'),
-              href: '/kyc-checker',
-            },
-            {
-              label: t('KYC Delegator'),
-              href: '/kyc-delegator',
-              supportChainIds: SUPPORT_KYC_DELEGATION,
-            },
-          ],
-        },
-        {
-          label: t('Launchpad'),
-          href: '/launchpad',
-          supportChainIds: SUPPORT_LAUNCHPAD,
-        },
-        {
-          label: t('Token Deployer'),
-          href: '/create-token',
-          supportChainIds: SUPPORT_TOKEN_DEPLOYER,
-        },
+        // {
+        //   label: t('Locks'),
+        //   href: '/locks',
+        //   supportChainIds: SUPPORT_LOCKS,
+        // },
+        // {
+        //   label: t('KYC'),
+        //   href: '/kyc',
+        //   supportChainIds: SUPPORT_KYC,
+        //   items: [
+        //     {
+        //       label: t('KYC'),
+        //       href: '/kyc',
+        //     },
+        //     {
+        //       label: t('KYC Checker'),
+        //       href: '/kyc-checker',
+        //     },
+        //     {
+        //       label: t('KYC Delegator'),
+        //       href: '/kyc-delegator',
+        //       supportChainIds: SUPPORT_KYC_DELEGATION,
+        //     },
+        //   ],
+        // },
+        // {
+        //   label: t('Launchpad'),
+        //   href: '/launchpad',
+        //   supportChainIds: SUPPORT_LAUNCHPAD,
+        // },
+        // {
+        //   label: t('Token Deployer'),
+        //   href: '/create-token',
+        //   supportChainIds: SUPPORT_TOKEN_DEPLOYER,
+        // },
         {
           label: t('Wiki'),
-          href: languageCode === 'zh-cn' ? 'https://wiki.icecreamswap.com/v/zh' : 'https://wiki.icecreamswap.com',
+          href: languageCode === 'zh-cn' ? 'https://wiki.mokoi.xyz/v/zh' : 'https://wiki.nokoi.xyz',
           type: DropdownMenuItemType.EXTERNAL_LINK,
         },
         // {

@@ -10,7 +10,7 @@ import { useTransactionAdder } from 'state/transactions/hooks'
 import styled, { useTheme } from 'styled-components'
 import kycAsset from './images/KYC.png'
 import Page from 'components/Layout/Page'
-import AddToWallet from 'views/CreateToken/components/AddToWallet'
+import AddToWallet from 'views/Archive/CreateToken/components/AddToWallet'
 import useTokenBalance from 'hooks/useTokenBalance'
 import { useTranslation } from '@pancakeswap/localization'
 import { useERC20 } from "hooks/useContract";

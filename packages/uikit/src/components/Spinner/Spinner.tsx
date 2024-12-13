@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import Image from "next/image";
-import IceCream from "../../img/icecream.png";
+// import IceCream from "../../img/icecream.png";
 import { SpinnerProps } from "./types";
 
 const rotate = keyframes`
@@ -34,7 +34,7 @@ const Container = styled.div`
 `;
 
 const IceImage = () => {
-  return <Image src={IceCream} width="180" height="180" alt="spinner" />;
+  // return <Image src={IceCream} width="180" height="180" alt="spinner" />;
 };
 
 const RotatingPancakeIcon = styled.div`
@@ -46,7 +46,7 @@ const Spinner: React.FC<React.PropsWithChildren<SpinnerProps>> = ({ size = 128 }
   return (
     <Container>
       <RotatingPancakeIcon>
-        <IceImage />
+        {/* <IceImage /> */}
       </RotatingPancakeIcon>
     </Container>
   );

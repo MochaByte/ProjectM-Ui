@@ -44,6 +44,7 @@
     "@pancakeswap/tsconfig": "workspace:*",
     "@stylelint/postcss-css-in-js": "^0.37.3",
     "@types/node": "22.5.2",
+    "@types/react-icons": "^3.0.0",
     "eslint-plugin-lodash": "^7.4.0",
     "eslint-plugin-strict-null-checks": "0.0.21",
     "husky": "^7.0.4",
