@@ -7,9 +7,14 @@ export const StyledSquadContainer = styled(Box)`
 `
 
 export const LandingBodyWrapper = styled(Flex)`
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 16px;
+  // max-width: 1200px;
+  // width: 100%;
+  // margin: 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
 
   ${({ theme }) => theme.mediaQueries.md} {
     margin: 0 40px;

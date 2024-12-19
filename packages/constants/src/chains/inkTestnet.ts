@@ -32,10 +32,10 @@ export const inkTestnet: IceChain = {
     name: 'Wrapped Ether',
   },
   stableToken: {
-    address: '0xA219439258ca9da29E9Cc4cE5596924745e12B93', // Replace with Ink's stable token address if available
+    address: '0x2bcd9c5A4780d878BcF644f5ff85A158100dafdB', // MockUSDC contract address
     decimals: 6,
-    symbol: 'USDT',
-    name: 'Tether USD',
+    symbol: 'USDC',
+    name: 'Mock USDC',
   },
   iceAddress: '0x4200000000000000000000000000000000000006',
   swap: {

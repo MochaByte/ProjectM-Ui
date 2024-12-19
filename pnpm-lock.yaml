@@ -26,7 +26,7 @@ importers:
         version: link:packages/tsconfig
       '@stylelint/postcss-css-in-js':
         specifier: ^0.37.3
-        version: 0.37.3(postcss-syntax@0.36.2(postcss-scss@4.0.3(postcss@8.4.45))(postcss@8.4.45))(postcss@8.4.45)
+        version: 0.37.3(postcss-syntax@0.36.2(postcss@8.4.45))(postcss@8.4.45)
       '@types/node':
         specifier: 22.5.2
         version: 22.5.2
@@ -390,6 +390,9 @@ importers:
       fast-json-stable-stringify:
         specifier: ^2.1.0
         version: 2.1.0
+      framer-motion:
+        specifier: 10.16.4
+        version: 10.16.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       graphql:
         specifier: ^16.6.0
         version: 16.9.0
@@ -443,7 +446,7 @@ importers:
         version: 2.3.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react-countup:
         specifier: ^6.4.2
-        version: 6.4.2(@babel/core@7.25.2)(@types/babel__core@7.20.5)(react@18.2.0)(rollup@3.29.4)
+        version: 6.4.2(@babel/core@7.25.2)(@types/babel__core@7.20.5)(react@18.2.0)(rollup@2.78.0)
       react-datepicker:
         specifier: ^4.8.0
         version: 4.8.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -537,7 +540,7 @@ importers:
         version: 5.10.2
       '@stylelint/postcss-css-in-js':
         specifier: ^0.37.2
-        version: 0.37.3(postcss-syntax@0.36.2(postcss-scss@4.0.3(postcss@8.4.45))(postcss@8.4.45))(postcss@8.4.45)
+        version: 0.37.3(postcss-syntax@0.36.2(postcss@8.4.45))(postcss@8.4.45)
       '@testing-library/jest-dom':
         specifier: ^5.16.2
         version: 5.16.2
@@ -757,7 +760,7 @@ importers:
         version: 1.2.9(bufferutil@4.0.8)(typescript@5.4.3)(utf-8-validate@5.0.10)(zod@3.21.4)
       wagmi:
         specifier: ^1.3.10
-        version: 1.3.10(@types/react@18.2.21)(bufferutil@4.0.8)(encoding@0.1.13)(immer@9.0.21)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.4.3)(utf-8-validate@5.0.10)(viem@1.2.9(bufferutil@4.0.8)(typescript@5.4.3)(utf-8-validate@5.0.10)(zod@3.21.4))(zod@3.21.4)
+        version: 1.3.10(bufferutil@4.0.8)(encoding@0.1.13)(immer@9.0.21)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.4.3)(utf-8-validate@5.0.10)(viem@1.2.9(bufferutil@4.0.8)(typescript@5.4.3)(utf-8-validate@5.0.10)(zod@3.21.4))(zod@3.21.4)
 
   packages/database:
     dependencies:
@@ -19136,7 +19139,7 @@ snapshots:
   '@json-rpc-tools/provider@1.7.6(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
     dependencies:
       '@json-rpc-tools/utils': 1.7.6
-      axios: 0.21.4(debug@4.3.6)
+      axios: 0.21.4
       safe-json-utils: 1.1.1
       ws: 7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10)
     transitivePeerDependencies:
@@ -19818,17 +19821,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@rollup/plugin-babel@6.0.3(@babel/core@7.25.2)(@types/babel__core@7.20.5)(rollup@3.29.4)':
-    dependencies:
-      '@babel/core': 7.25.2
-      '@babel/helper-module-imports': 7.24.7
-      '@rollup/pluginutils': 5.0.4(rollup@3.29.4)
-    optionalDependencies:
-      '@types/babel__core': 7.20.5
-      rollup: 3.29.4
-    transitivePeerDependencies:
-      - supports-color
-
   '@rollup/plugin-commonjs@24.0.0(rollup@2.78.0)':
     dependencies:
       '@rollup/pluginutils': 5.0.4(rollup@2.78.0)
@@ -19879,14 +19871,6 @@ snapshots:
       picomatch: 2.3.1
     optionalDependencies:
       rollup: 2.78.0
-
-  '@rollup/pluginutils@5.0.4(rollup@3.29.4)':
-    dependencies:
-      '@types/estree': 1.0.5
-      estree-walker: 2.0.2
-      picomatch: 2.3.1
-    optionalDependencies:
-      rollup: 3.29.4
 
   '@rushstack/node-core-library@3.61.0(@types/node@22.5.2)':
     dependencies:
@@ -21203,7 +21187,7 @@ snapshots:
       '@styled-system/core': 5.1.2
       '@styled-system/css': 5.1.5
 
-  '@stylelint/postcss-css-in-js@0.37.3(postcss-syntax@0.36.2(postcss-scss@4.0.3(postcss@8.4.45))(postcss@8.4.45))(postcss@8.4.45)':
+  '@stylelint/postcss-css-in-js@0.37.3(postcss-syntax@0.36.2(postcss@8.4.45))(postcss@8.4.45)':
     dependencies:
       '@babel/core': 7.25.2
       postcss: 8.4.45
@@ -22673,7 +22657,7 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@wagmi/core@1.3.9(@types/react@18.2.21)(bufferutil@4.0.8)(encoding@0.1.13)(immer@9.0.21)(react@18.2.0)(typescript@5.4.3)(utf-8-validate@5.0.10)(viem@1.2.9(bufferutil@4.0.8)(typescript@5.4.3)(utf-8-validate@5.0.10)(zod@3.21.4))(zod@3.21.4)':
+  '@wagmi/core@1.3.9(bufferutil@4.0.8)(encoding@0.1.13)(immer@9.0.21)(react@18.2.0)(typescript@5.4.3)(utf-8-validate@5.0.10)(viem@1.2.9(bufferutil@4.0.8)(typescript@5.4.3)(utf-8-validate@5.0.10)(zod@3.21.4))(zod@3.21.4)':
     dependencies:
       '@wagmi/chains': 1.7.0(typescript@5.4.3)
       '@wagmi/connectors': 2.7.0(@wagmi/chains@1.7.0(typescript@5.4.3))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)(typescript@5.4.3)(utf-8-validate@5.0.10)(viem@1.2.9(bufferutil@4.0.8)(typescript@5.4.3)(utf-8-validate@5.0.10)(zod@3.21.4))(zod@3.21.4)
@@ -23466,6 +23450,12 @@ snapshots:
 
   axe-core@4.8.2: {}
 
+  axios@0.21.4:
+    dependencies:
+      follow-redirects: 1.15.8(debug@4.3.4)
+    transitivePeerDependencies:
+      - debug
+
   axios@0.21.4(debug@4.3.6):
     dependencies:
       follow-redirects: 1.15.8(debug@4.3.6)
@@ -23474,7 +23464,7 @@ snapshots:
 
   axios@0.24.0:
     dependencies:
-      follow-redirects: 1.15.8(debug@4.3.6)
+      follow-redirects: 1.15.8(debug@4.3.4)
     transitivePeerDependencies:
       - debug
 
@@ -30554,17 +30544,6 @@ snapshots:
       - rollup
       - supports-color
 
-  react-countup@6.4.2(@babel/core@7.25.2)(@types/babel__core@7.20.5)(react@18.2.0)(rollup@3.29.4):
-    dependencies:
-      '@rollup/plugin-babel': 6.0.3(@babel/core@7.25.2)(@types/babel__core@7.20.5)(rollup@3.29.4)
-      countup.js: 2.8.0
-      react: 18.2.0
-    transitivePeerDependencies:
-      - '@babel/core'
-      - '@types/babel__core'
-      - rollup
-      - supports-color
-
   react-datepicker@4.8.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       '@popperjs/core': 2.11.8
@@ -33169,12 +33148,12 @@ snapshots:
       - utf-8-validate
       - zod
 
-  wagmi@1.3.10(@types/react@18.2.21)(bufferutil@4.0.8)(encoding@0.1.13)(immer@9.0.21)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.4.3)(utf-8-validate@5.0.10)(viem@1.2.9(bufferutil@4.0.8)(typescript@5.4.3)(utf-8-validate@5.0.10)(zod@3.21.4))(zod@3.21.4):
+  wagmi@1.3.10(bufferutil@4.0.8)(encoding@0.1.13)(immer@9.0.21)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.4.3)(utf-8-validate@5.0.10)(viem@1.2.9(bufferutil@4.0.8)(typescript@5.4.3)(utf-8-validate@5.0.10)(zod@3.21.4))(zod@3.21.4):
     dependencies:
       '@tanstack/query-sync-storage-persister': 4.35.7
       '@tanstack/react-query': 4.36.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@tanstack/react-query-persist-client': 4.35.7(@tanstack/react-query@4.36.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0))
-      '@wagmi/core': 1.3.9(@types/react@18.2.21)(bufferutil@4.0.8)(encoding@0.1.13)(immer@9.0.21)(react@18.2.0)(typescript@5.4.3)(utf-8-validate@5.0.10)(viem@1.2.9(bufferutil@4.0.8)(typescript@5.4.3)(utf-8-validate@5.0.10)(zod@3.21.4))(zod@3.21.4)
+      '@wagmi/core': 1.3.9(bufferutil@4.0.8)(encoding@0.1.13)(immer@9.0.21)(react@18.2.0)(typescript@5.4.3)(utf-8-validate@5.0.10)(viem@1.2.9(bufferutil@4.0.8)(typescript@5.4.3)(utf-8-validate@5.0.10)(zod@3.21.4))(zod@3.21.4)
       abitype: 0.8.7(typescript@5.4.3)(zod@3.21.4)
       react: 18.2.0
       use-sync-external-store: 1.2.0(react@18.2.0)

@@ -70,6 +70,7 @@
     "encoding": "^0.1.13",
     "ethers": "^5.7.0",
     "fast-json-stable-stringify": "^2.1.0",
+    "framer-motion": "10.16.4",
     "graphql": "^16.6.0",
     "graphql-request": "^5.0.0",
     "image-js": "^0.35.3",

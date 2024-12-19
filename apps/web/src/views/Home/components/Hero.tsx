@@ -160,12 +160,12 @@ const Hero = () => {
               priority
               objectFit="fill"
               placeholder="blur"
-              alt={t('IceCream Store')}
+              alt={t('Mokoi_creature')}
             />
           </BunnyWrapper>
-          <StarsWrapper>
+          {/* <StarsWrapper>
             <CompositeImage {...starsImage} />
-          </StarsWrapper>
+          </StarsWrapper> */}
         </Flex>
       </Flex>
     </>
