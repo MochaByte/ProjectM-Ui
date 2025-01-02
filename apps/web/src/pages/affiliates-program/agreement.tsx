@@ -2,6 +2,7 @@ import { Text, Link } from '@pancakeswap/uikit'
 import { Container } from 'pages/terms-of-service'
 import AffiliatesProgramLayout from 'views/AffiliatesProgram/components/AffiliatesProgramLayout'
 
+
 const Agreement = () => {
   return (
     <AffiliatesProgramLayout>

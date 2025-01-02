@@ -1,5 +1,5 @@
 import IceChain from '../ice-chain'
-import { FACTORY_ADDRESS, INIT_CODE_HASH } from "../common/swap";
+// import { FACTORY_ADDRESS, INIT_CODE_HASH } from "../common/swap";
 
 export const inkTestnet: IceChain = {
   id: 763373,
